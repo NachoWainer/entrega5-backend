@@ -41,7 +41,7 @@ app.use(session({
   store: MongoStore.create({
     mongoUrl: 'mongodb+srv://nachowainer:NIpg8gSuhgrRI5nP@codercluster.23a6ufo.mongodb.net/ecommerce',
     mongoOptions:{ useNewUrlParser: true, useUnifiedTopology: true},
-    ttl: 3600
+    ttl:18000
   }),
   secret:"C0d3Rs3CreT2023",
   resave:false,

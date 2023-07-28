@@ -3,6 +3,8 @@
 import express from 'express'
 import { productsModel } from '../dao/models/products.js';
 import cartsModel from '../dao/models/carts.js';
+import userModel from '../dao/models/Users.model.js';
+import session from 'express-session';
 
 
 const router= express.Router();
@@ -11,14 +13,18 @@ router.get("/register",(req,res)=>{
     res.render("register")
 })
 
-router.get("/login",(req,res)=>{
-    res.render("login")
-})
 router.get("/", (req, res) => {
-  res.render("profile", {
-    user: req.session.user,
-  });
+    res.render("login")
 });
+
+
+
+router.get("/logout", (req,res) => {
+    req.session.destroy(error => {
+        if (error) res.json({error: "error logout", mensaje: "Error al cerrar sesion"})
+        res.send("sesion cerrada correctamente")
+    })
+})
 
 
 
@@ -71,6 +77,8 @@ try {
     const status = "success"
     const nextLink=hasNextPage ? `page=${nextPage}&limit=${limite}` : null
     const prevLink= hasPrevPage ? `page=${prevPage}&limit=${limite}` : null
+    let user = req.session.user
+    let admin = (user.rol === "admin") ? true : false
       res.render("products",{
         status,
         payload,
@@ -82,7 +90,8 @@ try {
         hasNextPage,
         nextLink,
         prevLink,
-        user: req.session.user,   
+        user,
+        admin  
     })
     
 } catch (error) {

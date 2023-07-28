@@ -1,5 +1,12 @@
 <div>
-  <h1>Productos disponibles</h1>
+{{#if admin}}
+  <h1>Bienvenido, administrador {{user.name}}</h1>
+{{else}}
+  <h1>Bienvenido {{user.name}}!</h1>
+{{/if}}
+ 
+<hr/>  
+  <h2>Productos disponibles</h2>
 
   {{#each payload}}
     <p>{{id}}</p>
