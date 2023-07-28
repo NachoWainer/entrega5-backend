@@ -1,0 +1,62 @@
+[
+	{
+		"id": 1,
+		"title": "hola",
+		"description": "description",
+		"code": "123abc",
+		"price": 200,
+		"status": true,
+		"stock": 33,
+		"category": "category"
+	},
+	{
+		"id": 2,
+		"title": "Producto5",
+		"description": "description",
+		"code": "124abcd",
+		"price": 200,
+		"status": true,
+		"stock": 33,
+		"category": "category"
+	},
+	{
+		"id": 3,
+		"title": "Producto5",
+		"description": "description",
+		"code": "124abcde",
+		"price": 200,
+		"status": true,
+		"stock": 33,
+		"category": "category"
+	},
+	{
+		"id": 4,
+		"title": "Producto5",
+		"description": "description",
+		"code": "124abcdef",
+		"price": 200,
+		"status": true,
+		"stock": 33,
+		"category": "category"
+	},
+	{
+		"id": 5,
+		"title": "Producto5",
+		"description": "description",
+		"code": "124abcdefgh",
+		"price": 200,
+		"status": true,
+		"stock": 33,
+		"category": "category"
+	},
+	{
+		"id": 6,
+		"title": "Producto5",
+		"description": "description",
+		"code": "124abcdefgjh",
+		"price": 200,
+		"status": true,
+		"stock": 33,
+		"category": "category"
+	}
+]
